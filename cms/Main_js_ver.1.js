@@ -8,6 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 const delay = entry.target.getAttribute('data-delay') || 0;
                 entry.target.style.transition = `opacity 0.7s ease ${delay}ms, transform 0.7s ease ${delay}ms`;
                 entry.target.classList.add('visible');
+            } else {
+                // Remove visible class when out of view so it animates again next time
+                entry.target.classList.remove('visible');
+                // Remove the transition when hidden so that it disappears instantly
+                // and avoids reversed animating out
+                entry.target.style.transition = 'none';
             }
         });
     }, { threshold: 0.12 });
