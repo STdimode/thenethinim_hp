@@ -50,7 +50,7 @@
 }
 
 .cms-content-root button {
-  background: none;
+  background-color: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
