@@ -1,0 +1,585 @@
+/*
+@font-face {
+  font-family: 'Cinzel';
+  src: url('./fonts/Cinzel-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./fonts/PlayfairDisplay-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  src: url('./fonts/NotoSansKR-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('./fonts/Inter-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+*/
+
+/* Full-width breakout for legacy CMS wrappers */
+.cms-content-root {
+  font-family: 'Noto Sans KR', sans-serif;
+  min-height: 100vh;
+  background-color: #ffffff;
+
+  /* Breakout strategy to escape parent container */
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+/* Global Reset Utilities */
+.cms-content-root * {
+  box-sizing: border-box;
+}
+
+.cms-content-root a {
+  text-decoration: none;
+}
+
+.cms-content-root button {
+  /* background: none; */
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.gallery-control-btn {
+  background: none;
+}
+
+/* Animation Classes */
+.fade-up {
+  opacity: 0;
+  transform: translateY(36px);
+  /* Transtions will be applied by inline JS similar to original */
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Base Wrapper & Layout */
+.max-w-container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================================
+   Hero Section
+   ========================================= */
+.hero-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 728px;
+}
+
+.hero-bg-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-slider-controls {
+  position: absolute;
+  bottom: 24px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.hero-slide-btn {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.55);
+  transition: all 0.3s;
+}
+
+.hero-slide-btn.active {
+  width: 28px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+/* =========================================
+   Welcome Section
+   ========================================= */
+.welcome-section {
+  padding: 60px 0 56px;
+  background-color: #000;
+}
+
+.welcome-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 64px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.welcome-text-container {
+  min-width: 260px;
+  text-align: left;
+}
+
+.welcome-heading {
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.welcome-paragraph {
+  font-size: 17px;
+  color: #ddd;
+  line-height: 1.7;
+}
+
+.welcome-paragraph-br {
+  display: inline;
+}
+.welcome-paragraph-space {
+  display: none;
+}
+
+.welcome-grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 24px;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.welcome-item {
+  width: 150px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.welcome-item:hover {
+  transform: translateY(-6px);
+}
+
+.welcome-item-text {
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+/* =========================================
+   Three Cards Section
+   ========================================= */
+.cards-section {
+  padding-top: 60px;
+  padding-bottom: 70px;
+  background-color: white;
+}
+
+.cards-inner {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.card-item-container {
+  position: relative;
+  overflow: hidden;
+  height: 380px;
+}
+
+.card-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.7);
+}
+.card-bg-img-60 {
+  filter: saturate(0.6);
+}
+
+.card-overlay-heavy {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.45) 100%);
+}
+
+.card-overlay-light {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.3) 100%);
+}
+
+.card-content {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  right: 32px;
+}
+
+.card-subtitle {
+  color: rgba(255,255,255,0.85);
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.card-subtitle span {
+	font-size:18px;
+  font-weight: 300;
+}
+
+.card-title {
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.card-arrow-container {
+  position: absolute;
+  bottom: 28px;
+  right: 28px;
+}
+
+.card-arrow-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+.card-item-container:hover .card-arrow-btn {
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-4px);
+}
+
+/* =========================================
+   Church School Section
+   ========================================= */
+.church-school-section {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e8e8e8 0%, #f5f5f5 30%, #ffffff 60%, #f0f0f0 100%);
+  padding: 70px 0;
+}
+
+.church-school-overlay-grain {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  /* background-image set in html or js if needed, here we provide fallback */
+  background-size: cover;
+  background-repeat: repeat;
+  opacity: 0.15;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+
+}
+
+.church-school-overlay-glow {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background: radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.9) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.church-school-inner {
+  position: relative;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.church-school-header {
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.church-school-heading {
+  color: #222;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.church-school-paragraph {
+  color: #555;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.church-school-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 910px;
+  margin: 0 auto;
+}
+
+.church-school-card {
+  background-color: white;
+  padding: 40px 26px 34px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  height: 280px;
+}
+
+.church-school-icon-wrapper {
+  margin-bottom: 18px;
+  transform: scale(1.3);
+  transform-origin: center;
+}
+
+.church-school-card-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.church-school-card-desc {
+  font-size: 16px;
+  color: #777;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+/* =========================================
+   Gallery Section
+   ========================================= */
+.gallery-section {
+  padding: 60px 0 50px;
+  background-color: white;
+}
+
+.gallery-inner {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.gallery-heading {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 32px;
+}
+
+.gallery-carousel-container {
+  overflow: hidden;
+  width: 100%;
+  cursor: grab;
+}
+
+.gallery-carousel-container.dragging {
+  cursor: grabbing;
+}
+
+.gallery-track {
+  display: flex;
+  gap: 20px;
+  will-change: transform;
+  user-select: none;
+  pointer-events: auto;
+}
+
+.gallery-track.dragging {
+  pointer-events: none;
+}
+
+.gallery-slide {
+  flex-shrink: 0;
+  height: 260px;
+  overflow: hidden;
+}
+
+.gallery-slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+}
+
+.gallery-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+  padding: 0 40px;
+}
+
+.gallery-control-btn {
+  display: flex;
+  align-items: center;
+}
+
+.gallery-dots-container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.gallery-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ccc;
+  transition: all 0.3s;
+}
+
+.gallery-dot.active {
+  width: 20px;
+  border-radius: 4px;
+  background-color: #666;
+}
+
+.icon-mobile {
+  display: none;
+}
+
+.icon-desktop {
+  display: block;
+}
+
+/* =========================================
+   Mobile View (max-width: 767px)
+   ========================================= */
+@media (max-width: 767px) {
+  /* Hero */
+  .hero-section {
+    height: auto;
+    aspect-ratio: 4 / 3;
+    min-height: auto;
+  }
+
+  .hero-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* Welcome */
+  .welcome-section { padding: 40px 0 36px; }
+  .welcome-inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .welcome-text-container { min-width: auto; text-align: center; }
+  .welcome-heading { font-size: 26px; }
+  .welcome-paragraph { font-size: 15px; }
+  .welcome-paragraph-br { display: none; }
+  .welcome-paragraph-space { display: inline; }
+
+  .welcome-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    justify-content: center;
+    flex: none;
+  }
+  .welcome-item { width: 130px; height: 100px; }
+  .welcome-item-text { font-size: 13px; }
+
+  /* Cards */
+  .cards-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .cards-inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .card-item-container { height: 260px; }
+  .card-content { top: 24px; left: 24px; right: 24px; }
+  .card-subtitle { font-size: 14px; }
+  .card-title { font-size: 24px; }
+
+  /* Church School */
+  .church-school-section { padding: 48px 0; }
+  .church-school-inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .church-school-header { margin-bottom: 32px; }
+  .church-school-heading { font-size: 24px; }
+  .church-school-paragraph { font-size: 14px; }
+  .church-school-grid { grid-template-columns: 1fr; }
+  .church-school-card {
+    padding: 30px 20px 26px;
+    height: auto;
+  }
+  .church-school-card-title { font-size: 18px; }
+  .church-school-card-desc { font-size: 14px; }
+
+  /* Gallery */
+  .gallery-section { padding: 40px 0 36px; }
+  .gallery-inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .gallery-heading {
+    font-size: 26px;
+    margin-bottom: 24px;
+  }
+  .gallery-slide { height: 180px; }
+  .gallery-controls {
+    margin-top: 16px;
+    padding: 0 16px;
+  }
+
+  .icon-desktop { display: none; }
+  .icon-mobile { display: block; }
+}

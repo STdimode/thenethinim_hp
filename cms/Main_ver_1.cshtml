@@ -1,0 +1,252 @@
+@{
+    string layoutPath = "/UserData/nethinims/Layouts/nethinims_Layout";
+    string cssFile = layoutPath + "/Contents/Main_css_ver_1.css";
+    string jsFile = layoutPath + "/Scripts/Main_js_ver_1.js";
+    // 로컬 전환용 주석 (필요 시 해제)
+    // string localFontCss = layoutPath + "/Contents/fonts.css";
+}
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Noto+Sans+KR:wght@300;400;700&family=Inter:wght@300;400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+@* <link href="@Url.Content("~" + localFontCss)" rel="stylesheet" /> *@
+
+<link href="@Url.Content("~" + cssFile)" rel="stylesheet" />
+
+<div class="cms-content-root">
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <img src="/UserData/nethinims/Layouts/nethinims_Layout/Images/hero_slider.jpg" alt="hero" class="hero-bg-img" />
+        <div class="hero-slider-controls">
+            <button class="hero-slide-btn active" data-index="0"></button>
+            <button class="hero-slide-btn" data-index="1"></button>
+            <button class="hero-slide-btn" data-index="2"></button>
+        </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <div class="fade-up">
+        <section class="welcome-section">
+            <div class="max-w-container welcome-inner">
+                <div class="welcome-text-container">
+                    <h2 class="welcome-heading">welcome</h2>
+                    <p class="welcome-paragraph">
+                        환영합니다. 복음의 공공성을 고민하며 선교적 실천을<br class="welcome-paragraph-br" />
+                        <span class="welcome-paragraph-space"> </span>연구하고 실행하는 선교적 교회 공동체입니다.
+                    </p>
+                </div>
+                <div class="welcome-grid">
+                    <div class="welcome-item">
+                        <svg width="43" height="43" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 14 L26 22 L34 24 L26 26 L24 34 L22 26 L14 24 L22 22 Z" fill="#fff" stroke="#fff" stroke-width="1.2" stroke-linejoin="round"/></svg>
+                        <span class="welcome-item-text">부르심의 정체성</span>
+                    </div>
+                    <div class="welcome-item">
+                        <svg width="43" height="43" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="18" y1="8" x2="18" y2="28" stroke="#fff" stroke-width="1.2" stroke-linecap="round"/><line x1="10" y1="18" x2="26" y2="18" stroke="#fff" stroke-width="1.2" stroke-linecap="round"/></svg>
+                        <span class="welcome-item-text">느디님 사람들의 MVC</span>
+                    </div>
+                    <div class="welcome-item">
+                        <svg width="43" height="43" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="13" r="4" stroke="#fff" stroke-width="1.2" fill="none"/><circle cx="24" cy="13" r="4" stroke="#fff" stroke-width="1.2" fill="none"/><path d="M4 28c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="#fff" stroke-width="1.2" fill="none"/><path d="M16 28c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="#fff" stroke-width="1.2" fill="none"/></svg>
+                        <span class="welcome-item-text">운영과 구조</span>
+                    </div>
+                    <div class="welcome-item">
+                        <svg width="43" height="43" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 28s-9-5.5-9-11c0-3.5 2.5-6 5.5-6 1.8 0 3.1.9 3.5 1.5.4-.6 1.7-1.5 3.5-1.5 3 0 5.5 2.5 5.5 6 0 5.5-9 11-9 11z" stroke="#fff" stroke-width="1.2" fill="none" stroke-linejoin="round"/></svg>
+                        <span class="welcome-item-text">기금후원방법</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Three Cards Section -->
+    <section class="cards-section">
+        <div class="max-w-container cards-inner">
+            <div class="cards-grid">
+                <div class="fade-up" data-delay="0">
+                    <div class="card-item-container">
+                        <img src="https://images.unsplash.com/photo-1758599668125-e154250f24bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2b2x1bnRlZXIlMjBoYW5kcyUyMGhlbHBpbmclMjBhY3Rpdml0eXxlbnwxfHx8fDE3NzI0NDk0NjV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="주일예배" class="card-bg-img" />
+                        <div class="card-overlay-heavy"></div>
+                        <div class="card-content">
+                            <p class="card-subtitle">
+                                <span>Public Interest Activities</span>
+                            </p>
+                            <h3 class="card-title">공익활동</h3>
+                        </div>
+                        <div class="card-arrow-container">
+                            <div class="card-arrow-btn">
+                                <svg width="24" height="24" viewBox="0 0 12 12" fill="none">
+                                    <path d="M2 6H10M10 6L7 3M10 6L7 9" stroke="white" stroke-width="1.2"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fade-up" data-delay="120">
+                    <div class="card-item-container">
+                        <img src="https://images.unsplash.com/photo-1764728671460-34931d8261f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsaWJyYXJ5JTIwYm9va3MlMjByZXNlYXJjaCUyMHN0dWR5fGVufDF8fHx8MTc3MjQ0OTI1Mnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="교회소식" class="card-bg-img card-bg-img-60" />
+                        <div class="card-overlay-heavy"></div>
+                        <div class="card-content">
+                            <p class="card-subtitle">
+                                <span>Research Activities</span>
+                            </p>
+                            <h3 class="card-title">연구활동</h3>
+                        </div>
+                        <div class="card-arrow-container">
+                            <div class="card-arrow-btn">
+                                <svg width="24" height="24" viewBox="0 0 12 12" fill="none">
+                                    <path d="M2 6H10M10 6L7 3M10 6L7 9" stroke="white" stroke-width="1.2"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fade-up" data-delay="240">
+                    <div class="card-item-container">
+                        <img src="https://images.unsplash.com/photo-1771463268625-a465493795d1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxib29rJTIwY2xvc2V1cCUyMGRlc2slMjBvcGVuJTIwcGFnZXN8ZW58MXx8fHwxNzcyNDUxODM4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="주보보기" class="card-bg-img" />
+                        <div class="card-overlay-light"></div>
+                        <div class="card-content">
+                            <p class="card-subtitle">
+                                <span>Educational Activities</span>
+                            </p>
+                            <h3 class="card-title">교육활동</h3>
+                        </div>
+                        <div class="card-arrow-container">
+                            <div class="card-arrow-btn">
+                                <svg width="24" height="24" viewBox="0 0 12 12" fill="none">
+                                    <path d="M2 6H10M10 6L7 3M10 6L7 9" stroke="white" stroke-width="1.2"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Church School Section -->
+    <section class="church-school-section" style="">
+        <!-- Grain texture overlay -->
+        <div class="church-school-overlay-grain" style=""></div>
+        <div class="church-school-overlay-glow"></div>
+
+        <div class="max-w-container church-school-inner">
+            <div class="fade-up">
+                <div class="church-school-header">
+                    <h2 class="church-school-heading">느디님사람들 연대와 참여</h2>
+                    <p class="church-school-paragraph">
+                        그리스도의 길을 따라 교회, 기업, 전문인들과 함께 연대하여<br class="welcome-paragraph-br" />
+                        <span class="welcome-paragraph-space"> </span>소외된 이들이 존엄과 소망을 회복하도록 돕습니다.
+                    </p>
+                </div>
+            </div>
+
+            <div class="church-school-grid">
+                <div class="fade-up" data-delay="0">
+                    <div class="church-school-card">
+                        <div class="church-school-icon-wrapper">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="18" y="20" width="12" height="18" stroke="#334" stroke-width="1.5" fill="none"/>
+                                <path d="M12 20L24 12L36 20V38H12V20Z" stroke="#334" stroke-width="1.5" fill="none"/>
+                                <rect x="21" y="28" width="6" height="10" stroke="#334" stroke-width="1.2" fill="none"/>
+                                <line x1="24" y1="6" x2="24" y2="12" stroke="#334" stroke-width="1.5"/>
+                                <line x1="20" y1="9" x2="28" y2="9" stroke="#334" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <h3 class="church-school-card-title">교회의 연대와 참여</h3>
+                        <p class="church-school-card-desc">예수님의 사역을 따라,<br />소외된 이들을 돕는 연대의 실천</p>
+                    </div>
+                </div>
+
+                <div class="fade-up" data-delay="120">
+                    <div class="church-school-card">
+                        <div class="church-school-icon-wrapper">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="10" y="14" width="10" height="24" stroke="#334" stroke-width="1.5" fill="none"/>
+                                <rect x="22" y="8" width="14" height="30" stroke="#334" stroke-width="1.5" fill="none"/>
+                                <rect x="13" y="18" width="2" height="2" fill="#334"/>
+                                <rect x="16" y="18" width="2" height="2" fill="#334"/>
+                                <rect x="13" y="23" width="2" height="2" fill="#334"/>
+                                <rect x="16" y="23" width="2" height="2" fill="#334"/>
+                                <rect x="13" y="28" width="2" height="2" fill="#334"/>
+                                <rect x="16" y="28" width="2" height="2" fill="#334"/>
+                                <rect x="25" y="13" width="2" height="2" fill="#334"/>
+                                <rect x="29" y="13" width="2" height="2" fill="#334"/>
+                                <rect x="25" y="18" width="2" height="2" fill="#334"/>
+                                <rect x="29" y="18" width="2" height="2" fill="#334"/>
+                                <rect x="25" y="23" width="2" height="2" fill="#334"/>
+                                <rect x="29" y="23" width="2" height="2" fill="#334"/>
+                            </svg>
+                        </div>
+                        <h3 class="church-school-card-title">기업의 연대와 참여</h3>
+                        <p class="church-school-card-desc">기업의 자원과 전문성을 연결해<br />국내외 소외 이웃을 지원하는 협력</p>
+                    </div>
+                </div>
+
+                <div class="fade-up" data-delay="240">
+                    <div class="church-school-card">
+                        <div class="church-school-icon-wrapper">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="24" cy="20" r="5" stroke="#334" stroke-width="1.5" fill="none"/>
+                                <path d="M14 38c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="#334" stroke-width="1.5" fill="none"/>
+                                <path d="M16 12L24 9L32 12L24 15L16 12Z" stroke="#334" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+                                <line x1="32" y1="12" x2="32" y2="16" stroke="#324" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <h3 class="church-school-card-title">전문인 연대와 참여</h3>
+                        <p class="church-school-card-desc">전문가의 지식과 기술을 사역과 연결하여 세우는 연대</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <div class="fade-up">
+        <section class="gallery-section">
+            <div class="max-w-container gallery-inner">
+                <h2 class="gallery-heading">Gallery</h2>
+            </div>
+
+            <!-- GalleryCarousel Structure -->
+            <div>
+                <div id="gallery-container" class="gallery-carousel-container">
+                    <div id="gallery-track" class="gallery-track">
+                        <!-- Tripled gallery array is typically rendered here. The JS maps the 18 slides correctly and infinite loops over them. -->
+                        @for (int i = 0; i < 3; i++)
+                        {
+                            <div class="gallery-slide"><img src="https://images.unsplash.com/photo-1702395848595-c02f8cf931c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdW5saWdodCUyMHdpbmRvdyUyMHNoYWRvdyUyMHdhbGx8ZW58MXx8fHwxNzcyNDUyMzI1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="gallery" class="gallery-slide-img" /></div>
+                            <div class="gallery-slide"><img src="https://images.unsplash.com/photo-1665901277318-be8dc685c29d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3aW5kb3clMjBzaGFkb3clMjBtb3JuaW5nJTIwbGlnaHR8ZW58MXx8fHwxNzcyNDUyNDEyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="gallery" class="gallery-slide-img" /></div>
+                            <div class="gallery-slide"><img src="https://images.unsplash.com/photo-1584530313715-bfe628686135?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzaGFkb3clMjBsaWdodCUyMHdhbGwlMjBtaW5pbWFsfGVufDF8fHx8MTc3MjQ1MjMyNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="gallery" class="gallery-slide-img" /></div>
+                            <div class="gallery-slide"><img src="https://images.unsplash.com/photo-1741051761238-05156721fa90?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZnRlcm5vb24lMjBsaWdodCUyMHNoYWRvd3xlbnwxfHx8fDE3NzI0NTIzMjh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="gallery" class="gallery-slide-img" /></div>
+                            <div class="gallery-slide"><img src="/UserData/nethinims/Layouts/nethinims_Layout/Images/gallery_sample.jpg" alt="gallery" class="gallery-slide-img" /></div>
+                            <div class="gallery-slide"><img src="https://images.unsplash.com/photo-1736066097151-41cbc89f0857?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdW5saWdodCUyMHBhdHRlcm4lMjB3YWxsfGVufDF8fHx8MTc3MjQ1MjMyOHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="gallery" class="gallery-slide-img" /></div>
+                        }
+                    </div>
+                </div>
+
+                <div class="gallery-controls">
+                    <button id="gallery-prev-btn" class="gallery-control-btn">
+                        <svg class="icon-desktop" width="160" height="20" viewBox="0 0 160 20" fill="none"><line x1="155" y1="10" x2="10" y2="10" stroke="#bbb" stroke-width="1"></line><polyline points="18,3 10,10 18,17" stroke="#bbb" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"></polyline></svg>
+                        <svg class="icon-mobile" width="60" height="20" viewBox="0 0 60 20" fill="none"><line x1="55" y1="10" x2="10" y2="10" stroke="#bbb" stroke-width="1"></line><polyline points="18,3 10,10 18,17" stroke="#bbb" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"></polyline></svg>
+                    </button>
+
+                    <div class="gallery-dots-container">
+                        <button class="gallery-dot active" data-index="0"></button>
+                        <button class="gallery-dot" data-index="1"></button>
+                        <button class="gallery-dot" data-index="2"></button>
+                        <button class="gallery-dot" data-index="3"></button>
+                        <button class="gallery-dot" data-index="4"></button>
+                        <button class="gallery-dot" data-index="5"></button>
+                    </div>
+
+                    <button id="gallery-next-btn bt_arrow" class="gallery-control-btn">
+                        <svg class="icon-desktop" width="160" height="20" viewBox="0 0 160 20" fill="none"><line x1="5" y1="10" x2="150" y2="10" stroke="#bbb" stroke-width="1"></line><polyline points="142,3 150,10 142,17" stroke="#bbb" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"></polyline></svg>
+                        <svg class="icon-mobile" width="60" height="20" viewBox="0 0 60 20" fill="none"><line x1="5" y1="10" x2="50" y2="10" stroke="#bbb" stroke-width="1"></line><polyline points="42,3 50,10 42,17" stroke="#bbb" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"></polyline></svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</div>
+<script src="@Url.Content("~" + jsFile)"></script>
